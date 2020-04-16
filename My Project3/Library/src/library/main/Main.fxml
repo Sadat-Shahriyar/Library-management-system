@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="695.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.main.MainController">
+   <children>
+      <BorderPane prefHeight="708.0" prefWidth="1079.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="178.0" prefWidth="533.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="179.0" fitWidth="334.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ui/icons/15483322994737574.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="216.0" prefHeight="75.0" prefWidth="867.0" text="Bangladesh University of Engineering and Technology  " textAlignment="CENTER" textFill="#c91717" AnchorPane.bottomAnchor="103.0" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Book Antiqua Bold Italic" size="30.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="user" labelFloat="true" layoutX="412.0" layoutY="115.0" onAction="#loadUsername" prefHeight="50.0" prefWidth="190.0" promptText="Username" unFocusColor="#1683cc" AnchorPane.rightAnchor="410.0" />
+                  <JFXPasswordField fx:id="pass" labelFloat="true" layoutX="665.0" layoutY="115.0" onAction="#login" prefHeight="50.0" prefWidth="190.0" promptText="Password" unFocusColor="#4d4d4d" AnchorPane.rightAnchor="200.0" />
+                  <JFXButton layoutX="905.0" layoutY="76.0" onAction="#createNewAccount" prefHeight="40.0" prefWidth="175.0" stylesheets="@../../resources/newCascadeStyleSheet.css" text="Create a New Account" AnchorPane.rightAnchor="-1.0" />
+                  <JFXButton layoutX="906.0" layoutY="129.0" onAction="#login" prefHeight="40.0" prefWidth="175.0" stylesheets="@../../resources/newCascadeStyleSheet.css" text="Login" AnchorPane.rightAnchor="-1.0" />
+                  <Label fx:id="toplebel" alignment="CENTER" layoutX="464.0" layoutY="76.0" prefHeight="40.0" prefWidth="320.0" text="Sign In" AnchorPane.rightAnchor="280.0" />
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="0.0" prefWidth="1070.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton layoutX="255.0" layoutY="39.0" onAction="#loadAbout" prefHeight="25.0" prefWidth="1057.0" text="About" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </bottom>
+         <left>
+            <VBox prefHeight="558.0" prefWidth="213.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="libraryBtn" mnemonicParsing="false" onAction="#loadLibrary" prefHeight="500.0" prefWidth="300.0">
+                     <graphic>
+                        <ImageView fitHeight="120.0" fitWidth="197.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../ui/icons/Lib1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="onlineBtn" mnemonicParsing="false" onAction="#loadOnlineLibrary" prefHeight="500.0" prefWidth="300.0">
+                     <graphic>
+                        <ImageView fitHeight="120.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../ui/icons/154813737797872770.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="personalBtn" mnemonicParsing="false" onAction="#loadHomeLibrary" prefHeight="500.0" prefWidth="300.0">
+                     <graphic>
+                        <ImageView fitHeight="120.0" fitWidth="197.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../ui/icons/1548137377978727701.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="publisherBtn" mnemonicParsing="false" onAction="#loadPublishers" prefHeight="500.0" prefWidth="300.0">
+                     <graphic>
+                        <ImageView fitHeight="120.0" fitWidth="197.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/4.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="log" mnemonicParsing="false" onAction="#logOut" prefHeight="500.0" prefWidth="300.0">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/logout-button-png.svg.hi.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Information">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="261.0" layoutY="29.0" prefHeight="482.0" prefWidth="637.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox prefHeight="300.0" prefWidth="1800.0">
+                                       <children>
+                                          <TextArea prefHeight="300.0" prefWidth="1800.0" text="Library&#10;This is the Central Library, a collection of books, periodicals, newspapers, manuscripts,&#10; maps, documents, e-books, databases, and other formats. If you are a &#10;member of this library, you can read books here or borrow any book and take it at home.&#10;">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="10.0" prefHeight="300.0" prefWidth="1800.0">
+                                       <children>
+                                          <TextArea prefHeight="300.0" prefWidth="1800.0" text="Online Library&#10;This is the Online Library, a collection of books, periodicals, newspapers, manuscripts,&#10; maps, documents, e-books, audiobooks, databases, and other formats. If you are a &#10;member of this library, you can upload books here or download any book.&#10;">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="110.0" prefHeight="300.0" prefWidth="1800.0">
+                                       <children>
+                                          <TextArea prefHeight="300.0" prefWidth="1800.0" text="My Home Library&#10;This is the collection of different people Personal Libraries, a collection of huge books. &#10;We believe that sharing is caring. If you are a member of this library, you can request books&#10;from anyone and borrow any book.&#10;">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="10.0" layoutY="210.0" prefHeight="300.0" prefWidth="1800.0">
+                                       <children>
+                                          <TextArea prefHeight="300.0" prefWidth="1800.0" text="Book Sharing&#10;This is the page for different persons to share their Books. We believe that this will &#10;help everyone to read all books without cost. If you are a member of this library, you can see the&#10;list and choose the best.&#10;">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Books">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="bookTable" layoutX="-1.0" layoutY="27.0" prefHeight="1200.0" prefWidth="1800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+                                <columns>
+                                  <TableColumn fx:id="bookNameColumn" minWidth="128.0" prefWidth="128.0" text="Book Name" />
+                                  <TableColumn fx:id="authorNameColumn" minWidth="128.0" prefWidth="128.0" text="Author" />
+                                    <TableColumn fx:id="publisherNameColumn" minWidth="128.0" prefWidth="128.0" text="Publisher" />
+                                    <TableColumn fx:id="bookIdColumn" minWidth="128.0" prefWidth="128.0" text="Book ID" />
+                                    <TableColumn fx:id="availableColumn" minWidth="128.0" prefWidth="128.0" text="Availability" />
+                                </columns>
+                              </TableView>
+                              <Button layoutX="-1.0" layoutY="2.0" mnemonicParsing="false" onAction="#vewAllBooks" prefHeight="25.0" prefWidth="639.0" text="View All Books From The Library" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Search Book">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="482.0" prefWidth="637.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <ListView fx:id="issueDataList" prefHeight="327.0" prefWidth="637.0" BorderPane.alignment="CENTER">
+                                       <padding>
+                                          <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+                                       </padding>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                    </ListView>
+                                 </center>
+                                 <top>
+                                    <JFXTextField alignment="CENTER" prefHeight="25.0" prefWidth="572.0" promptText="Enter Book Name" BorderPane.alignment="CENTER" />
+                                 </top>
+                              </BorderPane>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="615.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="addbook.AddBookController">
+   <children>
+      <Label layoutX="70.0" layoutY="35.0" prefHeight="86.0" prefWidth="590.0" text="Add Book" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="35.0">
+         <font>
+            <Font name="Book Antiqua Italic" size="40.0" />
+         </font>
+      </Label>
+      <TextField fx:id="bookNameField" layoutX="70.0" layoutY="138.0" prefHeight="65.0" prefWidth="351.0" promptText="Book Name" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="138.0" />
+      <TextField fx:id="autherNameField" layoutX="70.0" layoutY="234.0" prefHeight="65.0" prefWidth="351.0" promptText="Auther Name" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="234.0" />
+      <TextField fx:id="publisherNameField" layoutX="70.0" layoutY="333.0" prefHeight="65.0" prefWidth="351.0" promptText="Pubisher Name" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="333.0" />
+      <Button fx:id="chooseFileBtn" layoutX="70.0" layoutY="451.0" mnemonicParsing="false" onAction="#chooseFile" prefHeight="65.0" prefWidth="245.0" styleClass="jfx-button" stylesheets="@../resources/newCascadeStyleSheet.css" text="Choose File" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="451.0" />
+      <Button fx:id="uploadBookBtn" layoutX="397.0" layoutY="451.0" mnemonicParsing="false" onAction="#uploadBook" prefHeight="65.0" prefWidth="280.0" styleClass="jfx-button" stylesheets="@../resources/newCascadeStyleSheet.css" text="Upload Book" AnchorPane.leftAnchor="397.0" AnchorPane.topAnchor="451.0" />
+      <Button fx:id="cancelBtn" layoutX="70.0" layoutY="535.0" mnemonicParsing="false" onAction="#cancel" prefHeight="48.0" prefWidth="245.0" styleClass="jfx-button" stylesheets="@../resources/newCascadeStyleSheet.css" text="Cancel" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="535.0" />
+      <Label fx:id="bookExistLabel" layoutX="471.0" layoutY="132.0" prefHeight="65.0" prefWidth="319.0" />
+   </children>
+</AnchorPane>

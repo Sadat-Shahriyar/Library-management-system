@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="1047.0" style="-fx-background-color: #c2c2d6;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.main.BookShareController">
+   <top>
+      <AnchorPane prefHeight="175.0" prefWidth="1047.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="190.0" layoutY="-2.0" prefHeight="126.0" prefWidth="467.0" text="Personal Library" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="390.0" AnchorPane.topAnchor="-2.0">
+               <font>
+                  <Font name="Book Antiqua Italic" size="50.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="166.0" fitWidth="1047.0" layoutX="446.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0">
+               <image>
+                  <Image url="@../../resources/154964870154040674%20(2).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="174.0" fitWidth="559.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0">
+               <image>
+                  <Image url="@../../resources/logo5001.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <VBox prefHeight="518.0" prefWidth="178.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="homeBtn" contentDisplay="TOP" mnemonicParsing="false" onAction="#homePage" prefHeight="400.0" prefWidth="200.0">
+               <graphic>
+                  <ImageView fitHeight="93.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ui/icons/home%20page.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="libraryBtn" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#library" prefHeight="400.0" prefWidth="200.0">
+               <graphic>
+                  <ImageView fitHeight="86.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ui/icons/Lib1_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="onlineLibraryBtn" contentDisplay="TOP" layoutX="10.0" layoutY="41.0" mnemonicParsing="false" onAction="#onlineLibrary" prefHeight="400.0" prefWidth="200.0">
+               <graphic>
+                  <ImageView fitHeight="87.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ui/icons/154813737797872770.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="myhomelibrarybtn" contentDisplay="TOP" layoutX="10.0" layoutY="72.0" mnemonicParsing="false" onAction="#myLibraryPage" prefHeight="400.0" prefWidth="200.0">
+               <graphic>
+                  <ImageView fitHeight="87.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ui/icons/1548137377978727701.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="shareTable" prefHeight="518.0" prefWidth="869.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columns>
+                  <TableColumn fx:id="nameCol" prefWidth="868.0" text="Book Sharers" />
+               </columns>
+               <contextMenu>
+                  <ContextMenu>
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#viewBooks" text="View Books" />
+                        <MenuItem mnemonicParsing="false" onAction="#contact" text="Contact Information" />
+                     </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

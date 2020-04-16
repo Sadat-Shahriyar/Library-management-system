@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PersonalLibraryDeleteBook.DeleteBookController">
+   <children>
+      <Label layoutX="83.0" layoutY="34.0" prefHeight="68.0" prefWidth="285.0" text="Delete Book" AnchorPane.leftAnchor="83.0" AnchorPane.topAnchor="34.0">
+         <font>
+            <Font name="Book Antiqua Italic" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="bookNameField" layoutX="83.0" layoutY="151.0" prefHeight="51.0" prefWidth="310.0" promptText="Book Name" AnchorPane.leftAnchor="83.0" AnchorPane.topAnchor="151.0" />
+      <Button fx:id="deleteBtn" layoutX="83.0" layoutY="311.0" mnemonicParsing="false" onAction="#delete" prefHeight="31.0" prefWidth="158.0" styleClass="jfx-button" stylesheets="@../resources/newCascadeStyleSheet.css" text="Delete" AnchorPane.leftAnchor="83.0" AnchorPane.topAnchor="311.0" />
+      <Label fx:id="bookExistLabel" layoutX="289.0" layoutY="316.0" prefHeight="21.0" prefWidth="285.0" AnchorPane.leftAnchor="289.0" AnchorPane.topAnchor="316.0" />
+      <TextField fx:id="autherNameField" layoutX="83.0" layoutY="225.0" prefHeight="51.0" prefWidth="310.0" promptText="Auther Name" AnchorPane.leftAnchor="83.0" AnchorPane.topAnchor="225.0" />
+   </children>
+</AnchorPane>

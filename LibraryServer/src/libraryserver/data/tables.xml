@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tables>
+    <table-entry name="BOOK1" col-data="title varchar(200),author varchar(200),publisher varchar(100),id varchar(200) primary key,isAvail boolean default true"/>
+    <table-entry name="MEMBER1" col-data="name varchar(200),category varchar(50),address varchar(200),mobile varchar(20),email varchar(100),id varchar(200) primary key"/>
+    <table-entry name="ISSUEBOOK" col-data="bid varchar(200) primary key,mid varchar(200),issueTime timestamp default CURRENT_TIMESTAMP,renew_count integer default 0,FOREIGN KEY (bid) REFERENCES BOOK1(id),FOREIGN KEY (mid) REFERENCES MEMBER1(id)"/>
+    <table-entry name="MAIL_SERVER_INFO" col-data="server_name varchar(255),server_port integer,user_email varchar(1024),user_password varchar(1024),ssl_enabled boolean"/>
+</tables>
+
+
+     
